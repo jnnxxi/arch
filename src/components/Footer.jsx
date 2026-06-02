@@ -13,6 +13,7 @@ import {
   FaYoutube,
 } from 'react-icons/fa';
 import logo from "../assets/company/logo-white.png";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -72,19 +73,19 @@ export default function Footer() {
 
           <ul className="space-y-4 text-gray-400">
             {[
-              "Home",
-              "About",
-              "Services",
-              "Projects",
-              "Contact",
+              { name: "Home", link: "/home" },
+              { name: "About", link: "/about" },
+              { name: "Services", link: "/services" },
+              { name: "Projects", link: "/projects" },
+              { name: "Contact", link: "/contact" },
             ].map((item) => (
-              <li key={item}>
-                <a
-                  href="#"
+              <li key={item.name}>
+                <Link
+                  to={item.link}
                   className="transition hover:text-yellow-400"
                 >
-                  {item}
-                </a>
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -100,7 +101,7 @@ export default function Footer() {
             {[
               "Residential Construction",
               "Commercial Buildings",
-              "Renevation Projects",
+              "Renovation Projects",
               "Infrastructure Projects"
             ].map((service) => (
               <li

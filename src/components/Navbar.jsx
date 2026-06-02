@@ -23,7 +23,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="relative bg-black border-b border-yellow-500/20"
+      className="sticky top-0 z-50 bg-black border-b border-yellow-500/20"
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">

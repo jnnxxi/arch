@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import about_banner from "../assets/images/about-banner.jpg";
 import {
   Crown,
   Target,
@@ -45,25 +46,27 @@ export default function About() {
       </div>
 
       {/* HERO */}
-      <section className="pt-36 pb-24 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
+      <section className="relative h-87.5 flex items-center justify-center overflow-hidden border-b border-yellow-500/10">
+        <div className="absolute inset-0">
+          <img
+            src={about_banner}
+            alt="About A+ Studio"
+            className="w-full h-full object-cover opacity-25"
+          />
+          <div className="absolute inset-0 bg-black/70" />
+        </div>
 
+        <div className="relative z-10 text-center px-6">
           <p className="uppercase tracking-[0.4em] text-yellow-400 text-sm">
             About Us
           </p>
 
-          <h1 className="mt-8 text-5xl md:text-7xl font-black leading-[1.1]">
-            Building Modern
-            <span className="block text-yellow-400 mt-2">
-              Architectural Experiences
+          <h1 className="mt-4 text-5xl md:text-6xl font-black">
+            Building Spaces
+            <span className="block text-yellow-400">
+              That Stand The Test Of Time
             </span>
           </h1>
-
-          <p className="mt-10 text-zinc-400 text-lg leading-relaxed max-w-3xl">
-            A+ Studio Design and Construction transforms ideas into timeless structures
-            through precision, creativity, and modern construction expertise.
-          </p>
-
         </div>
       </section>
 
@@ -157,13 +160,11 @@ export default function About() {
       </section>
 
 
-      {/* MISSION SECTION */}
-      <section className="py-40 px-6 relative overflow-hidden border-t border-yellow-500/10">
+      {/* MISSION & VISION */}
+      <section className="relative py-40 px-6 border-t border-yellow-500/10 overflow-hidden">
 
-        {/* BACKGROUND GLOW */}
-        <div className="absolute top-0 left-0 w-125 h-125 bg-yellow-500/5 blur-[140px]" />
 
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto relative z-10">
 
           {/* HEADER */}
           <motion.div
@@ -171,150 +172,110 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="max-w-3xl"
+            className="text-center max-w-3xl mx-auto"
           >
-            <p className="uppercase tracking-[0.4em] text-yellow-400 text-sm">
-              Our Mission
+            <p className="uppercase tracking-[0.5em] text-yellow-400 text-sm">
+              Mission & Vision
             </p>
 
-            <h2 className="mt-6 text-5xl md:text-7xl font-black leading-none">
-              Building With
+            <h2 className="mt-6 text-5xl md:text-6xl font-black leading-tight">
+              The Foundation Of
               <span className="block text-yellow-400">
-                Purpose & Precision
+                Everything We Build
               </span>
             </h2>
-          </motion.div>
 
-          {/* CONTENT */}
-          <div className="mt-24 grid lg:grid-cols-3 gap-10">
-
-            {[
-              {
-                number: "01",
-                title: "Cost-Effective Solutions",
-                text: "We deliver smart engineering strategies and efficient resource management to maximize value while respecting our clients’ investments.",
-              },
-              {
-                number: "02",
-                title: "Client Satisfaction",
-                text: "Through transparency, collaboration, and attention to detail, we ensure every project reflects the client’s vision with excellence.",
-              },
-              {
-                number: "03",
-                title: "High Safety Standards",
-                text: "Safety is the foundation of trust. We uphold strict standards that protect workers, clients, and the integrity of every project site.",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.15 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -8 }}
-                className="group relative border-t border-yellow-500/20 pt-10"
-              >
-                <span className="text-6xl font-black text-yellow-400/20 group-hover:text-yellow-400/40 transition-all">
-                  {item.number}
-                </span>
-
-                <h3 className="mt-6 text-3xl font-bold leading-tight">
-                  {item.title}
-                </h3>
-
-                <p className="mt-6 text-zinc-400 leading-loose text-lg">
-                  {item.text}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* VISION SECTION */}
-      <section className="py-40 px-6 relative overflow-hidden border-t border-yellow-500/10">
-
-        {/* BACKGROUND GLOW */}
-        <div className="absolute bottom-0 right-0 w-125 h-125 bg-yellow-500/5 blur-[140px]" />
-
-        <div className="max-w-7xl mx-auto">
-
-          {/* HEADER */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="max-w-3xl ml-auto text-right"
-          >
-            <p className="uppercase tracking-[0.4em] text-yellow-400 text-sm">
-              Our Vision
+            <p className="mt-6 text-zinc-400 text-lg">
+              Guided by innovation, precision, and craftsmanship,
+              we transform ideas into enduring structures.
             </p>
-
-            <h2 className="mt-6 text-5xl md:text-7xl font-black leading-none">
-              Designing The
-              <span className="block text-yellow-400">
-                Future Of Spaces
-              </span>
-            </h2>
           </motion.div>
 
-          {/* CONTENT */}
-          <div className="mt-24 grid lg:grid-cols-2 gap-16">
+          {/* CARDS */}
+          <div className="mt-24 grid lg:grid-cols-2 gap-10 items-stretch">
 
-            {/* ITEM 1 */}
+            {/* MISSION */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="relative border border-yellow-500/10 rounded-4xl p-12 bg-white/2 hover:border-yellow-400/30 transition-all"
+              className="h-full relative group"
             >
-              <span className="text-7xl font-black text-yellow-400/10">
-                01
-              </span>
+              <div className="absolute -inset-6 bg-yellow-500/5 blur-2xl rounded-[40px] opacity-60 group-hover:opacity-100 transition" />
 
-              <h3 className="mt-6 text-4xl font-bold leading-tight">
-                Build With Excellence
-              </h3>
+              <div className="relative h-full border border-yellow-500/15 rounded-[36px] p-12 bg-black/40 backdrop-blur-xl">
 
-              <p className="mt-8 text-zinc-400 leading-loose text-lg">
-                To become a leading design and build firm recognized for
-                excellence in craftsmanship, technical precision, and the
-                seamless integration of art and architecture in every Filipino
-                home and business.
-              </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-2xl bg-yellow-400/10 flex items-center justify-center">
+                    <Target className="text-yellow-400" size={28} />
+                  </div>
+
+                  <div>
+                    <p className="text-yellow-400 tracking-[0.3em] text-xs">
+                      OUR MISSION
+                    </p>
+                    <h3 className="text-3xl font-bold">
+                      Build With Purpose
+                    </h3>
+                  </div>
+                </div>
+
+                <p className="mt-8 text-zinc-400 leading-loose text-lg">
+                  To provide innovative, safe, and sustainable architectural
+                  and construction solutions that maximize space and value
+                  for our clients. We strive to deliver high-quality technical
+                  plans and professional construction services through a
+                  transparent, client-centered approach.
+                </p>
+
+              </div>
             </motion.div>
 
-            {/* ITEM 2 */}
+            {/* VISION */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="relative border border-yellow-500/10 rounded-4xl p-12 bg-white/2 hover:border-yellow-400/30 transition-all"
+              className="h-full relative group"
             >
-              <span className="text-7xl font-black text-yellow-400/10">
-                02
-              </span>
+              <div className="absolute -inset-6 bg-yellow-500/5 blur-2xl rounded-[40px] opacity-60 group-hover:opacity-100 transition" />
 
-              <h3 className="mt-6 text-4xl font-bold leading-tight">
-                Trust & Reliability
-              </h3>
+              <div className="relative h-full border border-yellow-500/15 rounded-[36px] p-12 bg-black/40 backdrop-blur-xl">
 
-              <p className="mt-8 text-zinc-400 leading-loose text-lg">
-                To be the foundation of every client’s peace of mind by
-                consistently delivering excellence through integrity,
-                transparent collaboration, and unwavering reliability in every
-                structure we build.
-              </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-2xl bg-yellow-400/10 flex items-center justify-center">
+                    <Eye className="text-yellow-400" size={28} />
+                  </div>
+
+                  <div>
+                    <p className="text-yellow-400 tracking-[0.3em] text-xs">
+                      OUR VISION
+                    </p>
+                    <h3 className="text-3xl font-bold">
+                      Shape The Future
+                    </h3>
+                  </div>
+                </div>
+
+                <p className="mt-8 text-zinc-400 leading-loose text-lg">
+                  To be a leading design and build firm recognized for
+                  excellence in craftsmanship, technical precision, and
+                  the seamless integration of art and architecture in
+                  every Filipino home and business.
+                </p>
+
+              </div>
             </motion.div>
+
           </div>
+
         </div>
       </section>
 
       {/* Services */}
-      <section className="py-40 px-6 border-t border-yellow-500/10">
+      {/* <section className="py-40 px-6 border-t border-yellow-500/10">
         <div className="max-w-7xl mx-auto">
 
           <motion.div
@@ -365,18 +326,18 @@ export default function About() {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us */}
-      <section className="py-40 px-6 relative overflow-hidden border-t border-yellow-500/10">
+      {/* <section className="py-40 px-6 relative overflow-hidden border-t border-yellow-500/10">
 
-        {/* BACKGROUND GLOW */}
+      
         <div className="absolute top-0 left-0 w-125 h-125 bg-yellow-500/5 blur-[140px]" />
         <div className="absolute bottom-0 right-0 w-100 h-100 bg-yellow-500/5 blur-[120px]" />
 
         <div className="max-w-7xl mx-auto">
 
-          {/* HEADER */}
+          
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -396,10 +357,10 @@ export default function About() {
             </h2>
           </motion.div>
 
-          {/* CONTENT */}
+         
           <div className="mt-24 grid lg:grid-cols-3 gap-10">
 
-            {/* ITEM 1 */}
+            
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -423,7 +384,7 @@ export default function About() {
               </p>
             </motion.div>
 
-            {/* ITEM 2 */}
+          
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -447,7 +408,7 @@ export default function About() {
               </p>
             </motion.div>
 
-            {/* ITEM 3 */}
+         
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -473,17 +434,17 @@ export default function About() {
 
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Process */}
-      <section className="py-40 px-6 relative overflow-hidden border-t border-yellow-500/10">
+      {/* <section className="py-40 px-6 relative overflow-hidden border-t border-yellow-500/10">
 
-        {/* BACKGROUND GLOW */}
+        
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-150 h-150 bg-yellow-500/5 blur-[160px]" />
 
         <div className="max-w-7xl mx-auto">
 
-          {/* HEADER */}
+          
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -503,10 +464,10 @@ export default function About() {
             </h2>
           </motion.div>
 
-          {/* STEPS */}
+         
           <div className="mt-24 space-y-16">
 
-            {/* STEP 1 */}
+            
             <motion.div
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -534,7 +495,7 @@ export default function About() {
               <div className="h-62.5 rounded-4xl border border-yellow-500/10 bg-white/2" />
             </motion.div>
 
-            {/* STEP 2 */}
+           
             <motion.div
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -561,7 +522,7 @@ export default function About() {
               <div className="h-62.5 rounded-4xl border border-yellow-500/10 bg-white/2 md:order-1" />
             </motion.div>
 
-            {/* STEP 3 */}
+        
             <motion.div
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -588,7 +549,7 @@ export default function About() {
               <div className="h-62.5 rounded-4xl border border-yellow-500/10 bg-white/2" />
             </motion.div>
 
-            {/* STEP 4 */}
+         
             <motion.div
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -617,7 +578,7 @@ export default function About() {
 
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* TEAM */}
       <section className="py-28 px-6">

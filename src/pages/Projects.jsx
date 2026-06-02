@@ -9,41 +9,75 @@ import chikten from "../assets/projects/chikten.png";
 
 export default function Projects() {
   return (
-    <section className="pt-50 pb-40 px-6 relative overflow-hidden bg-[#050505] border-t border-yellow-500/10">
+    <div className="bg-[#050505] text-white overflow-hidden">
 
-      {/* BACKGROUND GLOW */}
-      <div className="absolute top-0 left-0 w-150 h-150 bg-yellow-500/5 blur-[160px]" />
-      <div className="absolute bottom-0 right-0 w-125 h-125 bg-yellow-500/5 blur-[140px]" />
+      {/* GLOBAL BACKGLOW */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute top-0 left-0 w-150 h-150 bg-yellow-500/5 blur-[160px]" />
+        <div className="absolute bottom-0 right-0 w-125 h-125 bg-yellow-500/5 blur-[140px]" />
+      </div>
 
-      <div className="max-w-7xl mx-auto">
+      {/* ✅ SMALLER / IMPROVED HERO BANNER */}
+      <section className="relative h-[45vh] flex items-center justify-center text-center overflow-hidden border-b border-yellow-500/10">
 
-        {/* HEADER */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto text-center"
-        >
-          <p className="uppercase tracking-[0.4em] text-yellow-400 text-sm">
+        {/* BACKGROUND IMAGE */}
+        <motion.img
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.2 }}
+          src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2000&q=80"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        />
+
+        {/* DARK OVERLAY */}
+        <div className="absolute inset-0 bg-black/80" />
+
+        {/* GOLD TINT */}
+        <div className="absolute inset-0 bg-yellow-500/5" />
+
+        <div className="relative z-10 max-w-4xl px-6">
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="uppercase tracking-[0.4em] text-yellow-400 text-sm"
+          >
             Our Projects
-          </p>
+          </motion.p>
 
-          <h1 className="mt-6 text-5xl md:text-7xl font-black leading-none">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="mt-5 text-4xl md:text-6xl font-black leading-tight"
+          >
             Designed To Be
             <span className="block text-yellow-400">
               Built With Purpose
             </span>
-          </h1>
+          </motion.h1>
 
-          <p className="mt-8 text-zinc-400 text-lg leading-relaxed">
-            A curated selection of architectural works that showcase our
-            commitment to design excellence, precision, and functionality.
-          </p>
-        </motion.div>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="mt-6 text-zinc-300 text-base md:text-lg"
+          >
+            A curated selection of architectural works that showcase precision,
+            design excellence, and functionality.
+          </motion.p>
 
-        {/* PROJECT LIST */}
-        <div className="mt-48 space-y-32">
+        </div>
+      </section>
+
+      {/* PROJECT LIST (UNCHANGED BELOW THIS) */}
+      <section className="pt-24 pb-40 px-6 relative overflow-hidden">
+
+        <div className="max-w-7xl mx-auto">
+
+          <div className="mt-20 space-y-32">
+
+            {/* KEEP YOUR EXISTING MAP EXACTLY HERE */}
 
           {[
             {
@@ -173,5 +207,6 @@ export default function Projects() {
         </div>
       </div>
     </section>
+    </div>
   );
 }

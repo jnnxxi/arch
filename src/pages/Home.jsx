@@ -97,13 +97,13 @@ export default function HomePage() {
             <motion.div className="mt-10 flex gap-4">
               <button 
               onClick={() => navigate(`/projects`)}
-              className="rounded-xl bg-yellow-400 px-8 py-4 font-semibold text-black hover:bg-yellow-300 transition">
+              className="cursor-pointer rounded-xl bg-yellow-400 px-8 py-4 font-semibold text-black hover:bg-yellow-300 transition">
                 View Projects
               </button>
 
               <button 
               onClick={() => navigate(`/contact`)}
-              className="rounded-xl border border-white/20 bg-white/5 px-8 py-4 font-semibold text-white hover:border-yellow-400 hover:text-yellow-400 transition">
+              className="cursor-pointer rounded-xl border border-white/20 bg-white/5 px-8 py-4 font-semibold text-white hover:border-yellow-400 hover:text-yellow-400 transition">
                 Contact Us
               </button>
             </motion.div>
@@ -261,21 +261,21 @@ export default function HomePage() {
                 <div className="mt-10 flex gap-4">
                   <button
                     onClick={prev}
-                    className="rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:border-yellow-400 hover:text-yellow-400 transition"
+                    className="cursor-pointer rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:border-yellow-400 hover:text-yellow-400 transition"
                   >
                     Prev
                   </button>
 
                   <button
                     onClick={next}
-                    className="rounded-xl bg-yellow-400 px-6 py-3 text-sm font-semibold text-black hover:bg-yellow-300 transition"
+                    className="cursor-pointer rounded-xl bg-yellow-400 px-6 py-3 text-sm font-semibold text-black hover:bg-yellow-300 transition"
                   >
                     Next
                   </button>
 
                   <button
                     onClick={() => navigate(`/projects`)}
-                    className="rounded-xl border border-yellow-400 px-6 py-3 text-sm font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-black transition"
+                    className="cursor-pointer rounded-xl border border-yellow-400 px-6 py-3 text-sm font-semibold text-yellow-400 hover:bg-yellow-400 hover:text-black transition"
                   >
                     See More Projects
                   </button>
@@ -317,7 +317,7 @@ export default function HomePage() {
               Start your architectural journey with us today.
             </p>
 
-            <button className="mt-10 rounded-xl bg-black px-8 py-4 font-semibold text-white hover:bg-neutral-900 transition">
+            <button className="cursor-pointer mt-10 rounded-xl bg-black px-8 py-4 font-semibold text-white hover:bg-neutral-900 transition">
               Get in Touch
             </button>
           </motion.div>
