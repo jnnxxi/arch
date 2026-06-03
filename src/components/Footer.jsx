@@ -144,21 +144,21 @@ export default function Footer() {
                 </p>
 
                 <p className="text-gray-400">
-                  +63 912 345 6789
+                  +63 927 5764 140
                 </p>
               </div>
             </div>
 
             <div className="flex gap-4">
-              <EnvelopeIcon className="h-6 w-6 text-yellow-400" />
+              <EnvelopeIcon className="h-6 w-6 text-yellow-400 shrink-0" />
 
-              <div>
+              <div className="min-w-0">
                 <p className="font-medium text-white">
                   Email
                 </p>
 
-                <p className="text-gray-400">
-                  info@astudio.com
+                <p className="text-gray-400 break-all">
+                  alim.designandconstruction@gmail.com
                 </p>
               </div>
             </div>
@@ -187,7 +187,7 @@ export default function Footer() {
               className="w-full min-w-0 rounded-xl border border-yellow-500/20 bg-neutral-900 px-5 py-4 text-white outline-none placeholder:text-gray-500 focus:border-yellow-400"
             />
 
-            <button className="w-full sm:w-auto rounded-xl bg-yellow-400 px-8 py-4 font-semibold text-black transition hover:bg-yellow-300">
+            <button disabled className="w-full sm:w-auto rounded-xl bg-yellow-400 px-8 py-4 font-semibold text-black transition hover:bg-yellow-300">
               Subscribe
             </button>
           </div>
@@ -196,27 +196,12 @@ export default function Footer() {
 
       {/* BOTTOM */}
       <div className="border-t border-yellow-500/20">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-gray-500 md:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-6 text-sm text-gray-500 md:flex-row">
+          <p>© 2026 A+ Studio. All rights reserved.</p>
 
           <p>
-            © 2026 A+ Studio. All rights reserved.
+            Designed & Developed by J.A. (ニンジャ)
           </p>
-
-          <div className="flex gap-6">
-            <a
-              href="#"
-              className="transition hover:text-yellow-400"
-            >
-              Privacy Policy
-            </a>
-
-            <a
-              href="#"
-              className="transition hover:text-yellow-400"
-            >
-              Terms & Conditions
-            </a>
-          </div>
         </div>
       </div>
     </footer>
