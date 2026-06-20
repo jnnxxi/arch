@@ -6,11 +6,13 @@ import About from './pages/About'
 import Services from './pages/Services'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   return (
     <Router basename='/arch'>
       <div>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />

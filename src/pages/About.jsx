@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import about_banner from "../assets/images/about-banner.jpg";
+import profile from "../assets/images/profile-placeholder.png";
 import {
   Crown,
   Target,
@@ -15,10 +16,9 @@ import { Helmet } from "react-helmet-async";
 
 const team = [
   {
-    name: "Arch. Juan Dela Cruz",
+    name: "AMIR O. ALIM",
     role: "Chief Architect",
-    image:
-      "https://i.pinimg.com/originals/7a/d4/40/7ad4401ef00bc509b1645c03cf43d7ff.jpg",
+    image: profile
   },
 ];
 
@@ -147,22 +147,22 @@ export default function About() {
                   label: "Projects Completed",
                 },
                 {
-                  number: "2+",
+                  number: "3+",
                   label: "Years Experience",
                 },
                 {
-                  number: "10+",
+                  number: "9+",
                   label: "Satisfied Clients",
                 },
                 {
-                  number: "5",
+                  number: "4+",
                   label: "Professional Partners",
                 },
               ].map((item, i) => (
                 <motion.div
                   key={i}
                   whileHover={{ y: -5 }}
-                  className="relative overflow-hidden border border-yellow-500/20 bg-white/5 backdrop-blur-xl rounded-3xl p-8 group"
+                  className="relative overflow-hidden border border-yellow-500/20 bg-white/5 backdrop-blur-xl rounded-3xl p-8 group text-center"
                 >
                   {/* GOLD GLOW */}
                   <div className="absolute inset-0 bg-linear-to-br from-yellow-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
